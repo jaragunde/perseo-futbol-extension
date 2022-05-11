@@ -1,0 +1,22 @@
+{
+  "name": "Perseo Fútbol Extension",
+  "version": "0.1",
+  "description": "FALTA UNOOOOOOOO",
+  "permissions": [
+    "https://pf-env.eba-2fntvvpi.eu-west-3.elasticbeanstalk.com/"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "128": "icons/favicon.ico"
+    }
+  },
+  "icons": {
+    "128": "icons/favicon.ico"
+  },
+
+  "manifest_version": 2
+}
