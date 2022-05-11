@@ -1,0 +1,19 @@
+<!-- botón disputar -->
+
+<button class="boton-estandar disputar-jornada" id="botonDisputarJornada" onclick="disputarJornada()">
+
+		<span class="glyphicon glyphicon-play glyphicon-grande"></span><br>
+
+
+		Disputar<br>Liga
+
+
+</button>
+
+
+<!-- botón "faltan..." -->
+
+<button class="boton-estandar disputar-jornada" id="botonDisputarJornada" onclick="disputarJornada()" disabled="">
+
+	<span class="glyphicon glyphicon-ok glyphicon-grande"></span><br>Faltan 16<br>jugadores
+</button>
