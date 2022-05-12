@@ -10,6 +10,11 @@ const greyIcon = {
     "128": "icons/favicon-grey.png"
   }
 };
+const unoIcon = {
+  path: {
+    "128": "icons/favicon-uno.png"
+  }
+};
 
 chrome.browserAction.onClicked.addListener(function (activeTab) {
   chrome.tabs.create({ url: SITE });
@@ -24,11 +29,17 @@ function checkSiteStatus() {
     const parser = new DOMParser();
     const xmlDocument = parser.parseFromString(text, 'text/html');
     const glyph = xmlDocument.querySelector(".disputar-jornada > .glyphicon");
-    if (glyph && glyph.classList.contains("glyphicon-play")) {
+    if (!glyph) {
+      chrome.browserAction.setIcon(greyIcon);
+    }
+    else if (glyph.classList.contains("glyphicon-play")) {
       chrome.browserAction.setIcon(colorIcon);
     }
-    else if (!glyph || glyph.classList.contains("glyphicon-ok")) {
-      chrome.browserAction.setIcon(greyIcon);
+    else if (glyph.classList.contains("glyphicon-ok")) {
+      if(glyph.nextSibling.nextSibling.textContent.includes("Falta 1"))
+        chrome.browserAction.setIcon(unoIcon);
+      else
+        chrome.browserAction.setIcon(greyIcon);
     }
   });
 }
