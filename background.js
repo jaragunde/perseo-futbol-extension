@@ -27,7 +27,7 @@ function checkSiteStatus() {
     if (glyph && glyph.classList.contains("glyphicon-play")) {
       chrome.browserAction.setIcon(colorIcon);
     }
-    else if (glyph && glyph.classList.contains("glyphicon-ok")) {
+    else if (!glyph || glyph.classList.contains("glyphicon-ok")) {
       chrome.browserAction.setIcon(greyIcon);
     }
   });
