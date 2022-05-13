@@ -16,10 +16,6 @@ const unoIcon = {
   }
 };
 
-chrome.browserAction.onClicked.addListener(function (activeTab) {
-  chrome.tabs.create({ url: SITE });
-});
-
 function checkSiteStatus() {
   fetch(SITE + "/portada").then(function (response) {
     if (response.ok) {
@@ -46,3 +42,8 @@ function checkSiteStatus() {
 
 checkSiteStatus();
 window.setInterval(checkSiteStatus, 60000 /* 1 min */);
+
+chrome.browserAction.onClicked.addListener(function (activeTab) {
+  checkSiteStatus();
+  chrome.tabs.create({ url: SITE });
+});
