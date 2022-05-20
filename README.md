@@ -1,9 +1,9 @@
 # Extensión de navegador para Perseo Fútbol
 
-Comprueba si ya FALTA UNOOOOO sin gastar la tecla F5, con un icono en la barra
+Comprueba si aún FALTA UNOOOOO sin gastar la tecla F5, con un icono en la barra
 de herramientas que cambia según el estado del juego.
 
-## Installation
+## Instalación
 
 Descarga la última versión de la extensión para tu navegador desde la
 [página de releases](https://github.com/jaragunde/perseo-futbol-extension/releases)
